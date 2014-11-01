@@ -1,0 +1,6 @@
+<ul>
+<%User.where(true).each do |user| %>
+<li><%= "#{ user.first_name} #{user.second_name}"%></li>
+<%end%>
+</ul>
+
