@@ -17,6 +17,7 @@ default: &default
   password: sinned
   socket: /var/run/mysqld/mysqld.sock
 
+
 development:
   <<: *default
   database: loyality_points_expire_database
@@ -26,7 +27,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_test_app_test
+  database: test_db
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

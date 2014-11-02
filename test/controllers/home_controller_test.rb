@@ -6,4 +6,14 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "shoul not throw exception" do
+  	t = PointExpirer.new
+  	date = Date.new(2014,3,13)
+    
+ 	assert t.expire(date)
+  end
+
+
+
+
 end
