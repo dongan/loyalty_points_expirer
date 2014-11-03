@@ -18,7 +18,7 @@ class HomeControllerTest < ActionController::TestCase
   	date = Date.new(2014,3,13)
   	t.expire(date)
 
-  	assert_not_nil PointLineItem.where(points:-295)
+  	assert_not_nil PointLineItem.where(points:-265)
   end
  
 
