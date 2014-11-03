@@ -6,13 +6,21 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "shoul not throw exception" do
+  test "should not throw exception" do
   	t = PointExpirer.new
-  	date = Date.new(2014,3,13)
+    date = Date.new(2014,3,13)
     
- 	assert t.expire(date)
+    assert t.expire(date)
   end
 
+  test "should create new line in DB" do
+  	t = PointExpirer.new
+  	date = Date.new(2014,3,13)
+  	t.expire(date)
+
+  	assert_not_nil PointLineItem.where(points:-295)
+  end
+ 
 
 
 
